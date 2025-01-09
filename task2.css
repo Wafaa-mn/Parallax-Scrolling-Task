@@ -55,9 +55,9 @@ body, html {
 /* Earth */
 .earth {
     position: absolute;
-    top: 50%;       /* Centers vertically */
-    left: 48%;      /* Centers horizontally */
-    transform: translate(-50%, -50%); /* Adjusts for the image size */
+    top: 50%;       
+    left: 48%;      
+    transform: translate(-50%, -50%); 
     z-index: 3;
 }
 
@@ -117,15 +117,15 @@ body, html {
 }
 
 .scroll-paragraph {
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
     transition: opacity 1s ease-in-out;
     font-size: 2rem;
     color: white;
     text-align: center;
-     /* Adds space between the previous paragraph */
+    
 }
 
-/* Make the paragraph visible on scroll */
+
 .scroll-paragraph.visible {
     opacity: 1;
 }
@@ -150,14 +150,14 @@ h1 {
     font-size: 3rem;
     margin-bottom: 40px;
     margin-top: 5px;
-  /* Space between heading and paragraph */
+  
     
 }
 
 h2 {
     font-size: 2rem;
     margin-top: 60px;
-    margin-bottom: 10px; /* Space between heading and paragraph */
+    margin-bottom: 10px; 
 }
 
 p {
