@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+    margin: 0;
+  padding: 100;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background:     url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/background.jpg') repeat;
+    background-size: cover; 
+    background-attachment: fixed; / 
+    z-index: 1;
+}
+
+}
+
+#parallax-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    perspective: 1px;
+    
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.alien {
+    position: absolute;
+    z-index: 3;
+    animation: float 3s infinite ease-in-out;
+}
+
+.alien-1 {
+    width: 100px;
+    top: 60%;
+    left: 10%;
+}
+
+.spaceship {
+    width: 150px;
+    top: 130%;
+    right: 3%;
+}
+
+/* Earth */
+.earth {
+    position: absolute;
+    top: 50%;       /* Centers vertically */
+    left: 48%;      /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for the image size */
+    z-index: 3;
+}
+
+
+.earth img {
+    width: 200px;
+    animation: rotateEarth 20s linear infinite;
+}
+
+/* Shooting Stars */
+#shooting-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: shoot 2s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotateEarth {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 100vh) scale(0);
+        opacity: 0;
+    }
+}
+
+.scroll-paragraph {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+     /* Adds space between the previous paragraph */
+}
+
+/* Make the paragraph visible on scroll */
+.scroll-paragraph.visible {
+    opacity: 1;
+}
+
+
+
+
+.text-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 10; 
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-top: 5px;
+  /* Space between heading and paragraph */
+    
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 10px; /* Space between heading and paragraph */
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto
+    color: black;
+    
+  
+}
