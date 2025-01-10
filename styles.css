@@ -21,7 +21,6 @@ body, html {
 #parallax-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
     perspective: 1px;
     
 }
