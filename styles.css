@@ -36,7 +36,6 @@ body, html {
 
 .alien {
     background: url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/alien.png');
-    
     z-index: 2;
     animation: float 3s infinite ease-in-out;
     width: 100px;
@@ -46,8 +45,9 @@ body, html {
 
 
 .spaceship {
+    animation: float 3s infinite ease-in-out;
     width: 150px;
-    top: 130%;
+    bottom: 60%;
     right: 3%;
     z-index: 2;
 }
