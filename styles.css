@@ -39,8 +39,8 @@ body, html {
     z-index: 2;
     animation: float 3s infinite ease-in-out;
     width: 100px;
-    top: 30%;
-    left: 10%;
+    top: 50%;
+    left: 30%;
 }
 
 
