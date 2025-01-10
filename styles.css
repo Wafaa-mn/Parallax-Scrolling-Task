@@ -35,6 +35,7 @@ body, html {
 }
 
 .alien {
+    position: relative;
     background: url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/alien.png');
     z-index: 2;
     animation: float 3s infinite ease-in-out;
