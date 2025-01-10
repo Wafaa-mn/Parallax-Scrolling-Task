@@ -1,9 +1,11 @@
+/* Resetting default styles */
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 100;
+  padding: 0;
 }
 
+/* Body and HTML styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -13,16 +15,19 @@ body, html {
   background: url("https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/background.jpg") repeat;
   background-size: cover;
   background-attachment: fixed;
-  z-index: 1;
+  z-index: 0; /* Set z-index of background to 0 */
 }
 
+/* Parallax container styles */
 #parallax-container {
   position: relative;
   width: 100%;
   overflow: hidden;
   perspective: 1px;
+  z-index: 0; /* Parallax container below other elements */
 }
 
+/* Parallax layer styles */
 .parallax-layer {
   position: absolute;
   width: 100%;
@@ -31,12 +36,14 @@ body, html {
   will-change: transform;
 }
 
+/* Alien animation styles */
 .alien {
   position: absolute;
-  z-index: 3;
+  z-index: 2; /* Ensuring aliens are above background but below other elements */
   animation: float 3s infinite ease-in-out;
 }
 
+/* Alien-1 specific styles */
 .alien-1 {
   background-image: url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/alien.png');
   width: 100px;
@@ -44,27 +51,31 @@ body, html {
   left: 10%;
 }
 
+/* Spaceship animation styles */
 .spaceship {
+  position: absolute;
   width: 150px;
   top: 130%;
   right: 3%;
+  z-index: 2; /* Ensure spaceship is above background but below other elements */
 }
 
-/* Earth */
+/* Earth styles */
 .earth {
   position: absolute;
   top: 50%;
   left: 48%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 3; /* Earth should be above aliens */
 }
 
 .earth img {
   width: 200px;
   animation: rotateEarth 20s linear infinite;
+  z-index: 3; /* Ensure Earth image rotates above aliens */
 }
 
-/* Shooting Stars */
+/* Shooting stars styles */
 #shooting-stars {
   position: absolute;
   top: 0;
@@ -72,9 +83,10 @@ body, html {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 5;
+  z-index: 4; /* Shooting stars should be above everything else */
 }
 
+/* Shooting stars animation */
 .shooting-star {
   position: absolute;
   width: 2px;
@@ -84,6 +96,7 @@ body, html {
   animation: shoot 2s linear infinite;
 }
 
+/* Keyframes */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -92,6 +105,7 @@ body, html {
     transform: translateY(-20px);
   }
 }
+
 @keyframes rotateEarth {
   from {
     transform: rotate(0deg);
@@ -100,6 +114,7 @@ body, html {
     transform: rotate(360deg);
   }
 }
+
 @keyframes shoot {
   0% {
     transform: translate(0, 0) scale(1);
@@ -110,6 +125,8 @@ body, html {
     opacity: 0;
   }
 }
+
+/* Scroll paragraph styles */
 .scroll-paragraph {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -122,6 +139,7 @@ body, html {
   opacity: 1;
 }
 
+/* Text container styles */
 .text-container {
   position: absolute;
   top: 10%;
@@ -129,7 +147,7 @@ body, html {
   transform: translateX(-50%);
   color: white;
   text-align: center;
-  z-index: 10;
+  z-index: 10; /* Text container should be on top of everything */
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -155,5 +173,3 @@ p {
   margin-right: auto;
   color: black;
 }
-
-/*# sourceMappingURL=styles.css.map */
