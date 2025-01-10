@@ -1,6 +1,5 @@
 - name: Build CSS
   run: npm run build-css
-
 - name: Copy files to main
   run: cp dist/styles.css styles.css
 
