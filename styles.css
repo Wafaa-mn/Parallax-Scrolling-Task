@@ -39,14 +39,11 @@ body, html {
     position: absolute;
     z-index: 2;
     animation: float 3s infinite ease-in-out;
-}
-
-.alien-1 {
     width: 100px;
     top: 60%;
     left: 10%;
-    z-index: 2;
 }
+
 
 .spaceship {
     width: 150px;
