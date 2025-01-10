@@ -36,11 +36,11 @@ body, html {
 
 .alien {
     background: url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/alien.png');
-    position: absolute;
+    
     z-index: 2;
     animation: float 3s infinite ease-in-out;
     width: 100px;
-    top: 40%;
+    top: 30%;
     left: 10%;
 }
 
