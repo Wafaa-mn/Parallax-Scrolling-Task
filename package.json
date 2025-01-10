@@ -1,0 +1,14 @@
+{
+  "name": "parallax-scrolling-task",
+  "version": "1.0.0",
+  "description": "A parallax scrolling effect with SCSS compilation",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "sass task2.scss dist/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.49.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
