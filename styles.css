@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 100;
+
 }
 
 /* Body and HTML styles */
@@ -15,7 +16,7 @@ body, html {
   background: url("https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/background.jpg") repeat;
   background-size: cover;
   background-attachment: fixed;
-  z-index: 0; /* Set z-index of background to 0 */
+  z-index: 1; /* Set z-index of background to 0 */
 }
 
 /* Parallax container styles */
@@ -24,7 +25,7 @@ body, html {
   width: 100%;
   overflow: hidden;
   perspective: 1px;
-  z-index: 0; /* Parallax container below other elements */
+ 
 }
 
 /* Parallax layer styles */
@@ -39,7 +40,7 @@ body, html {
 /* Alien animation styles */
 .alien {
   position: absolute;
-  z-index: 10; /* Ensuring aliens are above background but below other elements */
+  z-index: 3; /* Ensuring aliens are above background but below other elements */
   animation: float 3s infinite ease-in-out;
 }
 
