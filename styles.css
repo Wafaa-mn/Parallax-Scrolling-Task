@@ -46,10 +46,12 @@ body, html {
 
 .spaceship {
     animation: float 3s infinite ease-in-out;
-    width: 150px;
-    bottom: 60%;
-    right: 3%;
+    top: 50%;  /* Center the spaceship vertically in the scroll-paragraph */
+    left: 100%; /* Move it to the right of the paragraph */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    width: 100px; /* Adjust size as needed */
     z-index: 2;
+
 }
 
 /* Earth */
