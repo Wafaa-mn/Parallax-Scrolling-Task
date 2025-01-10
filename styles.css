@@ -1,176 +1,172 @@
-/* Resetting default styles */
 * {
   box-sizing: border-box;
-  margin: 0;
+    margin: 0;
   padding: 100;
-
 }
 
-/* Body and HTML styles */
 body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  background: url("https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/background.jpg") repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: 1; /* Set z-index of background to 0 */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/background.jpg') repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
 }
 
-/* Parallax container styles */
+
+
 #parallax-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  perspective: 1px;
- 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    perspective: 1px;
+    
 }
 
-/* Parallax layer styles */
 .parallax-layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  will-change: transform;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
-/* Alien animation styles */
 .alien {
-  position: absolute;
-  z-index: 3; /* Ensuring aliens are above background but below other elements */
-  animation: float 3s infinite ease-in-out;
+    position: absolute;
+    z-index: 3;
+    animation: float 3s infinite ease-in-out;
 }
 
-/* Alien-1 specific styles */
 .alien-1 {
-  background-image: url('https://raw.githubusercontent.com/Wafaa-mn/Parallax-Scrolling-Task/main/alien.png');
-  width: 100px;
-  top: 60%;
-  left: 10%;
+    width: 100px;
+    top: 60%;
+    left: 10%;
 }
 
-/* Spaceship animation styles */
 .spaceship {
-  position: absolute;
-  width: 150px;
-  top: 130%;
-  right: 3%;
-  z-index: 2; /* Ensure spaceship is above background but below other elements */
+    width: 150px;
+    top: 130%;
+    right: 3%;
 }
 
-/* Earth styles */
+/* Earth */
 .earth {
-  position: absolute;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  z-index: 3; /* Earth should be above aliens */
+    position: absolute;
+    top: 50%;       
+    left: 48%;      
+    transform: translate(-50%, -50%); 
+    z-index: 3;
 }
+
 
 .earth img {
-  width: 200px;
-  animation: rotateEarth 20s linear infinite;
-  z-index: 3; /* Ensure Earth image rotates above aliens */
+    width: 200px;
+    animation: rotateEarth 20s linear infinite;
 }
 
-/* Shooting stars styles */
+/* Shooting Stars */
 #shooting-stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 4; /* Shooting stars should be above everything else */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
 }
 
-/* Shooting stars animation */
 .shooting-star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: white;
-  border-radius: 50%;
-  animation: shoot 2s linear infinite;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: shoot 2s linear infinite;
 }
 
-/* Keyframes */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 @keyframes rotateEarth {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes shoot {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(100vw, 100vh) scale(0);
-    opacity: 0;
-  }
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 100vh) scale(0);
+        opacity: 0;
+    }
 }
 
-/* Scroll paragraph styles */
 .scroll-paragraph {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  font-size: 2rem;
-  color: white;
-  text-align: center;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    
 }
+
 
 .scroll-paragraph.visible {
-  opacity: 1;
+    opacity: 1;
 }
 
-/* Text container styles */
+
+
+
 .text-container {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-align: center;
-  z-index: 10; /* Text container should be on top of everything */
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 10; 
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  margin-top: 5px;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-top: 5px;
+  
+    
 }
 
 h2 {
-  font-size: 2rem;
-  margin-top: 60px;
-  margin-bottom: 10px;
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 10px; 
 }
 
 p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    
+  
 }
