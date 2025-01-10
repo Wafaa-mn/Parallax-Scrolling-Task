@@ -9,7 +9,12 @@ function handleParallax(event) {
 
     const layers = document.querySelectorAll(".parallax-layer");
     layers.forEach(layer => {
-        const depth = parseFloat(layer.style.transform.match(/translateZ\((-?\d+)px\)/)[1]);
+        let depth = parseFloat(layer.style.transform.match(/translateZ\((-?\d+)px\)/)?.[1]);
+        
+        if (isNaN(depth)) {
+            depth = 0; // fallback if no depth value is found
+        }
+
         const offsetX = moveX * depth;
         const offsetY = moveY * depth;
         layer.style.transform = `translate(${offsetX}px, ${offsetY}px) translateZ(${depth}px)`;
@@ -20,7 +25,9 @@ const aliens = document.querySelectorAll(".alien");
 aliens.forEach(alien => {
     alien.addEventListener("click", () => {
         alien.style.transform = "scale(1.5) rotate(360deg)";
-        setTimeout(() => alien.style.transform = "scale(1)", 1000);
+        setTimeout(() => {
+            alien.style.transform = "scale(1) rotate(0deg)";
+        }, 1000);
     });
 });
 
@@ -37,15 +44,22 @@ function createShootingStar() {
     star.style.animationDuration = (Math.random() * 2 + 2) + "s";
 
     starsContainer.appendChild(star);
-  
+
     setTimeout(() => {
         star.remove();
     }, 2000);
 }
 
+let isScrolling = false;
+
 window.addEventListener("scroll", () => {
-  
-    createShootingStar();
+    if (!isScrolling) {
+        isScrolling = true;
+        setTimeout(() => {
+            createShootingStar();
+            isScrolling = false;
+        }, 200);
+    }
 });
 
 window.addEventListener("scroll", handleScroll);
